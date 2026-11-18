@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>First Reel – learn filmmaking and find your crew</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700;800&family=Figtree:wght@400;500;600&display=swap">
+<style>
+:root{--bg:#eef1f6;--surface:#fff;--ink:#14213d;--muted:#55607a;--line:#cfd6e4;--amber:#ffb703;--amber-ink:#14213d;--ok:#1f7a4d;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0f1626;--surface:#18223a;--ink:#eef1f6;--muted:#a3adc4;--line:#2c3a5c;--ok:#5fd39a}}
+:root[data-theme="dark"]{--bg:#0f1626;--surface:#18223a;--ink:#eef1f6;--muted:#a3adc4;--line:#2c3a5c;--ok:#5fd39a}
+*{box-sizing:border-box}html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 17px/1.55 Figtree,system-ui,sans-serif}
+h1,h2,h3{font-family:'Bricolage Grotesque',Georgia,sans-serif;line-height:1.05;margin:0}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--amber);outline-offset:2px}
+.wrap{max-width:1040px;margin:0 auto;padding:0 20px}
+nav{display:flex;justify-content:space-between;align-items:center;padding:18px 0;gap:12px;flex-wrap:wrap}
+nav b{font:800 22px 'Bricolage Grotesque',sans-serif}
+nav div a{margin-left:18px;text-decoration:none;font-weight:600;color:var(--muted)}
+nav div a:hover{color:var(--ink)}
+.hero{display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:center;padding:36px 0 64px}
+.hero h1{font-size:clamp(40px,6vw,68px);font-weight:800;letter-spacing:-.02em}
+.hero p{color:var(--muted);max-width:46ch;font-size:19px;margin:18px 0 26px}
+.btn{display:inline-block;background:var(--amber);color:var(--amber-ink);font-weight:700;padding:13px 22px;border-radius:8px;text-decoration:none;border:0;font-size:16px;cursor:pointer;font-family:inherit}
+.btn.alt{background:transparent;color:var(--ink);border:2px solid var(--ink);margin-left:8px}
+/* slate */
+.slate{background:#14213d;color:#fff;border-radius:10px;overflow:hidden;box-shadow:0 18px 40px rgba(20,33,61,.3);transform:rotate(2deg)}
+.stripes{height:34px;background:repeating-linear-gradient(-45deg,#fff 0 22px,#14213d 22px 44px);transform-origin:left bottom;transition:transform .35s}
+.slate.clap .stripes{transform:rotate(-9deg)}
+.slate dl{margin:0;display:grid;grid-template-columns:1fr 1fr}
+.slate dl div{padding:12px 16px;border:1px solid #3a4a73}
+.slate dl .wide{grid-column:1/-1}
+.slate dt{font-size:13px;color:#aab6d3}
+.slate dd{margin:0;font:700 22px 'Bricolage Grotesque',sans-serif;min-height:30px;overflow-wrap:anywhere}
+.slate input{width:100%;margin-top:14px;padding:12px;border-radius:8px;border:0;font:inherit;color:#14213d}
+.slate label{display:block;padding:0 16px 16px;font-size:14px;color:#aab6d3}
+section{padding:56px 0;border-top:1px solid var(--line)}
+section h2{font-size:clamp(30px,4vw,44px);font-weight:800;letter-spacing:-.01em}
+.lede{color:var(--muted);max-width:56ch;margin:10px 0 28px}
+.prog{height:10px;background:var(--line);border-radius:6px;overflow:hidden;margin:0 0 6px}
+.prog i{display:block;height:100%;width:0;background:var(--amber);transition:width .3s}
+.stages{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:18px;margin-top:22px}
+.stage{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:20px}
+.stage h3{font-size:22px;margin-bottom:4px}
+.stage small{color:var(--muted)}
+.stage ul{list-style:none;padding:0;margin:14px 0 0}
+.stage li{margin:8px 0}
+.stage label{display:flex;gap:10px;cursor:pointer;align-items:flex-start}
+.stage input{margin-top:5px;accent-color:var(--ok);width:18px;height:18px;flex:none}
+.stage input:checked+span{color:var(--muted);text-decoration:line-through}
+.kit{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:0;border:1px solid var(--line);border-radius:12px;overflow:hidden;background:var(--surface)}
+.kit div{padding:18px 20px;border-right:1px solid var(--line);border-bottom:1px solid var(--line)}
+.kit b{display:block;font-family:'Bricolage Grotesque',sans-serif;font-size:19px}
+.kit span{color:var(--muted);font-size:15px}
+.challenge{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:24px;display:flex;gap:20px;justify-content:space-between;align-items:center;flex-wrap:wrap}
+.challenge p{margin:6px 0 0;font:700 clamp(20px,3vw,28px)/1.2 'Bricolage Grotesque',sans-serif;max-width:30ch}
+.tools{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:20px}
+.chip{border:2px solid var(--line);background:var(--surface);color:var(--ink);border-radius:999px;padding:6px 14px;font:600 15px Figtree,sans-serif;cursor:pointer}
+.chip[aria-pressed="true"]{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.board{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:16px}
+.post{background:var(--surface);border:1px solid var(--line);border-left:6px solid var(--amber);border-radius:10px;padding:16px 18px}
+.post.need{border-left-color:var(--ink)}
+.post h3{font-size:20px}.post p{margin:6px 0;color:var(--muted);font-size:15px}
+.post b{font-size:14px}
+form.add{margin-top:28px;background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:22px;display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:14px}
+form.add h3{grid-column:1/-1;font-size:24px}
+form.add label{display:flex;flex-direction:column;gap:4px;font-weight:600;font-size:15px}
+form.add input,form.add select,form.add textarea{font:inherit;padding:10px;border:1px solid var(--line);border-radius:8px;background:var(--bg);color:var(--ink)}
+form.add .full{grid-column:1/-1}
+.note{color:var(--muted);font-size:14px;margin-top:10px}
+.prof{display:grid;grid-template-columns:1fr 1.2fr;gap:20px}.card{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:20px}.avatar{width:64px;height:64px;border-radius:50%;background:var(--amber);color:#14213d;display:grid;place-items:center;font:800 28px 'Bricolage Grotesque',sans-serif;margin-bottom:10px}.stats{display:flex;gap:18px;flex-wrap:wrap;margin:14px 0}.stats b{display:block;font:800 26px 'Bricolage Grotesque',sans-serif}.stats span{font-size:14px;color:var(--muted)}.heat{display:grid;grid-auto-flow:column;grid-template-rows:repeat(7,11px);gap:3px;overflow-x:auto;padding-bottom:6px}.heat i{width:11px;height:11px;border-radius:2px;background:var(--line)}.heat i.l1{background:#ffe08a}.heat i.l2{background:#ffb703}.heat i.l3{background:#c98600}.skill{display:inline-block;border:1px solid var(--line);border-radius:6px;padding:2px 9px;margin:3px 4px 0 0;font-size:14px}.btn.sm{padding:7px 14px;font-size:14px;margin-top:8px}.btn.sm.on{background:transparent;border:2px solid var(--ok);color:var(--ok)}.tag{display:inline-block;font-size:13px;font-weight:600;border:1px solid var(--line);border-radius:999px;padding:1px 10px;margin-right:6px}@media(max-width:780px){.prof{grid-template-columns:1fr}}.stories{display:flex;gap:14px;overflow-x:auto;padding:4px 0 18px}.story{flex:none;width:68px;text-align:center;font-size:13px;text-decoration:none}.ring{width:62px;height:62px;border-radius:50%;padding:3px;margin:0 auto 4px;background:conic-gradient(#ffb703,#ff6b6b,#ffb703)}.ring b{width:100%;height:100%;border-radius:50%;background:var(--surface);display:grid;place-items:center;font:800 22px 'Bricolage Grotesque',sans-serif}.feed{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:14px}.fc{background:var(--surface);border:1px solid var(--line);border-radius:12px;overflow:hidden}.fc img,.fc .ph{width:100%;aspect-ratio:16/9;object-fit:cover;display:block}.ph{display:grid;place-items:center;color:#fff;background:linear-gradient(135deg,#14213d,#3a4a73);font:800 24px 'Bricolage Grotesque',sans-serif;padding:14px;text-align:center}.fc .b{padding:12px 14px}.fc p{margin:4px 0;font-size:15px}[hidden]{display:none!important}#onb{position:fixed;inset:0;background:rgba(10,16,30,.75);display:grid;place-items:center;padding:16px;z-index:50;overflow:auto}#onb form{background:var(--surface);color:var(--ink);border-radius:14px;max-width:580px;width:100%;padding:24px;max-height:92vh;overflow:auto}#onb h2{font-size:30px}#onb fieldset{border:1px solid var(--line);border-radius:10px;margin:14px 0;padding:8px 14px 12px}#onb legend{font-weight:700;padding:0 6px}#onb label.o{display:flex;gap:10px;align-items:center;margin:7px 0;cursor:pointer}#onb input[type=radio],#onb input[type=checkbox]{width:18px;height:18px;accent-color:var(--ink);flex:none}#onb input[type=text]{width:100%;padding:10px;border:1px solid var(--line);border-radius:8px;background:var(--bg);color:var(--ink);font:inherit;margin-top:4px}[data-u]{cursor:pointer}a[data-u]{text-decoration:underline}#pm{position:fixed;inset:0;background:rgba(10,16,30,.75);display:grid;place-items:center;padding:16px;z-index:60;overflow:auto}#pmBox{max-width:620px;width:100%;max-height:92vh;overflow:auto}.thumbs{display:flex;gap:8px;flex-wrap:wrap;margin:8px 0 14px}.thumb{position:relative;display:block}.thumb .play{position:absolute;inset:0;display:grid;place-items:center;font-size:44px;color:#fff;background:rgba(0,0,0,.25);text-shadow:0 2px 8px rgba(0,0,0,.6)}.thumb .badge{position:absolute;left:8px;bottom:8px;background:rgba(0,0,0,.72);color:#fff;border-radius:6px;padding:2px 8px;font-size:12px;font-weight:600}.fc video{width:100%;aspect-ratio:16/9;background:#000;display:block}footer{padding:36px 0 56px;border-top:1px solid var(--line);color:var(--muted)}
+@media(max-width:780px){.hero{grid-template-columns:1fr}.slate{transform:none}nav div a{margin:0 14px 0 0}}
+@media(prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<nav><b>First Reel</b><div><a href="#learn">Learn</a><a href="#make">Make</a><a href="#crew">Crew</a><a href="#feed">Feed</a><a href="#projects">Projects</a><a href="#mentors">Mentors</a><a href="#opps">Opportunities</a><a href="#members">Members</a><a href="#profile">My profile</a><a href="#" id="retake">Customize</a></div></nav>
+
+<header class="hero">
+  <div>
+    <h1>No team. No gear. No experience. Start your film.</h1>
+    <p>Think LinkedIn, GitHub and Instagram, built for filmmakers. Post your stills and films, open projects so others can join, build a profile, learn the basics, and find mentors, crew, festivals and casting calls.</p>
+    <a class="btn" href="#learn">Start learning</a><a class="btn alt" href="#crew">Find a crew</a>
+  </div>
+  <div class="slate" id="slate" aria-label="Interactive film slate">
+    <div class="stripes"></div>
+    <dl>
+      <div class="wide"><dt>Film</dt><dd id="sFilm">My first short</dd></div>
+      <div><dt>Director</dt><dd id="sName">You</dd></div>
+      <div><dt>Take</dt><dd id="sTake">1</dd></div>
+    </dl>
+    <label>Type your name and press Clap.
+      <input id="nameIn" type="text" placeholder="Your name" maxlength="24" aria-label="Your name">
+    </label>
+    <div style="padding:0 16px 16px"><button class="btn" id="clap" type="button">Clap</button></div>
+  </div>
+</header>
+
+<div class="note" id="viewBar" hidden style="margin:0 0 20px;padding:12px 14px;border:1px solid var(--line);border-radius:10px;background:var(--surface)"><span id="viewTxt"></span> <button class="chip" id="showAll" type="button"></button></div>
+<section id="learn">
+  <h2>Your learning path</h2>
+  <p class="lede">Four stages, about two weeks each if you give it a few hours a week. Tick lessons off as you finish them. Your progress stays in this browser.</p>
+  <div class="prog"><i id="bar"></i></div>
+  <div id="pct" class="note" style="margin:0">0% complete</div>
+  <div class="stages" id="stages"></div>
+</section>
+
+<section id="make">
+  <h2>Make something this week</h2>
+  <p class="lede">You learn faster by finishing small films than by watching long tutorials. All you need is a phone.</p>
+  <div class="challenge">
+    <div><strong>Your challenge</strong><p id="chText">Film one minute of someone waiting for something.</p></div>
+    <button class="btn" id="chBtn" type="button">Give me another</button>
+  </div>
+  <h3 style="margin:34px 0 14px;font-size:24px">Free starter kit</h3>
+  <div class="kit">
+    <div><b>Camera</b><span>Your phone. Turn on the grid lines and shoot horizontal.</span></div>
+    <div><b>Editing</b><span>DaVinci Resolve or CapCut, both free.</span></div>
+    <div><b>Sound</b><span>Phone earphones held close to the speaker beat a far-away mic.</span></div>
+    <div><b>Writing</b><span>Free screenwriting apps like Trelby or Highland's free tier.</span></div>
+    <div><b>Light</b><span>A window, a white sheet and a lamp. Shoot near sunrise or sunset.</span></div>
+    <div><b>Feedback</b><span>Post your film to the crew board below and ask for notes.</span></div>
+  </div>
+</section>
+
+<section id="crew">
+  <h2>Find your crew</h2>
+  <p class="lede">Every film needs more than one person. Browse what other students need, or post what you can offer.</p>
+  <div class="tools" id="filters" role="group" aria-label="Filter by role"></div>
+  <div class="board" id="board" aria-live="polite"></div>
+  <form class="add" id="addForm">
+    <h3>Post to the board</h3>
+    <label>Your name<input name="name" required maxlength="40"></label>
+    <label>College<input name="college" required maxlength="50"></label>
+    <label>I am<select name="kind"><option value="need">Looking for help</option><option value="offer">Offering my skills</option></select></label>
+    <label>Role<select name="role"><option value="Director">Director 🎬</option><option value="Writer">Writer ✍️</option><option value="Camera">Camera 🎥</option><option value="Editor">Editor ✂️</option><option value="Sound">Sound 🎧</option><option value="Actor">Actor 🎭</option></select></label>
+    <label class="full">What is the project or what can you do?<textarea name="msg" rows="3" required maxlength="200"></textarea></label>
+    <label class="full">How should people reach you?<input name="contact" required maxlength="60" placeholder="Instagram handle or college email"></label>
+    <div class="full"><button class="btn" type="submit">Post</button>
+    <div class="note">This is a prototype. Posts are saved only in your own browser. Share contact details you are comfortable making public, and meet new collaborators in public places the first time.</div></div>
+  </form>
+</section>
+
+<section id="feed"><h2>Feed</h2><p class="lede">Share film stills, behind-the-scenes shots and finished shorts. Like what you see and message the people behind it.</p><div class="stories" id="stories" aria-label="Members"></div><div class="feed" id="feedGrid"></div><form class="add" id="feedForm"><h3>Post to the feed</h3><label>Title<input name="title" required maxlength="50"></label><label>Film link (optional if you upload a video)<input name="link" type="url" placeholder="https://youtube.com/..." maxlength="200"></label><label class="full">Caption<input name="caption" required maxlength="140"></label><label class="full">Upload a video (MP4 or WebM, up to 20 MB)<input name="video" type="file" accept="video/mp4,video/webm,video/quicktime"></label><label class="full">Still image (needed for links, optional for uploads)<input name="img" type="file" accept="image/*"></label><div class="full"><button class="btn" type="submit">Post</button><div class="note">Only post photos you took or have permission to share. Images are shrunk to fit. Uploaded videos can be up to 20 MB, so export at 720p.</div><div class="note" id="feedErr" role="alert" style="color:var(--ink);font-weight:600"></div></div></form></section>
+<section id="projects"><h2>Projects</h2><p class="lede">Like a code repository, but for films. Open a project, list the roles you need, and let others star it or ask to join.</p><div class="board" id="projBoard"></div><form class="add" id="projForm"><h3>Start a project</h3><label>Title<input name="title" required maxlength="50"></label><label>Status<select name="status"><option>Writing</option><option>Shooting</option><option>Editing</option><option>Released</option></select></label><label class="full">One-line story<input name="logline" required maxlength="140"></label><label class="full">Roles needed, separated by commas<input name="roles" placeholder="Camera, Sound, Actor" maxlength="80"></label><div class="full"><button class="btn" type="submit">Open project</button></div></form></section>
+<section id="mentors"><h2>Mentors</h2><p class="lede">Working filmmakers and senior students who can review your work. Send a connection request with a clear question.</p><div class="board" id="mentorBoard"></div><p class="note">Sample mentors for the prototype. Replace with real people who have agreed to be listed.</p></section>
+<section id="opps"><h2>Opportunities</h2><p class="lede">Festivals to submit to, contests to enter and casting calls to answer.</p><div class="tools" id="oppTabs" role="group" aria-label="Opportunity type"></div><div class="board" id="oppBoard"></div><p class="note">Sample listings. Always confirm dates, fees and eligibility on the official site before you apply.</p></section>
+<section id="members"><h2>Members</h2><p class="lede">Filmmakers who have saved a profile. Find collaborators by skill and college.</p><div class="board" id="memBoard"></div><p class="note" id="netNote">Sharing is off in this view. Open the shared link while signed in to see other students.</p></section>
+<section id="profile"><h2>My profile</h2><p class="lede">Your filmmaker profile. It fills in as you learn, start projects and connect with mentors.</p><div class="prof"><div class="card"><div class="avatar" id="pAv">?</div><h3 id="pName">Your name</h3><div id="pHead" style="color:var(--muted)">Add a headline</div><div id="pSkills"></div><div class="stats"><div><b id="stL">0</b><span>lessons done</span></div><div><b id="stP">0</b><span>projects</span></div><div><b id="stC">0</b><span>connections</span></div><div><b id="stS">0</b><span>stars</span></div></div><div style="font-weight:600;margin-bottom:6px">Activity</div><div class="heat" id="heat" aria-label="Activity grid"></div></div><form class="add" id="profForm" style="margin-top:0"><h3>Edit profile</h3><label>Name<input name="name" maxlength="40"></label><label>College<input name="college" maxlength="50"></label><label class="full">Headline<input name="head" maxlength="80" placeholder="Aspiring cinematographer at ..."></label><label class="full">Skills, separated by commas<input name="skills" maxlength="100"></label><label class="full">Contact for collaborators (email or Instagram handle)<input name="contact" maxlength="80"></label><div class="full"><button class="btn" type="submit">Save profile</button></div></form></div></section>
+<div id="onb" role="dialog" aria-modal="true" aria-labelledby="onbT" hidden><form id="onbForm"><h2 id="onbT">Welcome to First Reel</h2><p class="note" style="margin:6px 0 0">Four quick questions. We will show only the pages that match you. You can change this any time with Customize.</p>
+<label style="display:block;margin-top:14px;font-weight:700">What should we call you?<input type="text" name="name" maxlength="40" autocomplete="name"></label>
+<fieldset><legend>How much film experience do you have?</legend><label class="o"><input type="radio" name="exp" value="Complete beginner" required>Complete beginner</label><label class="o"><input type="radio" name="exp" value="Made a few films">I have made a few films</label><label class="o"><input type="radio" name="exp" value="Experienced">I am experienced</label></fieldset>
+<fieldset><legend>What do you want to do first? Pick any.</legend><label class="o"><input type="checkbox" name="goal" value="Learn the basics">Learn the basics</label><label class="o"><input type="checkbox" name="goal" value="Find a crew">Find a team or crew</label><label class="o"><input type="checkbox" name="goal" value="Get a mentor">Get a mentor</label><label class="o"><input type="checkbox" name="goal" value="Show my work">Show my work</label><label class="o"><input type="checkbox" name="goal" value="Find festivals and casting calls">Find festivals, contests and casting calls</label></fieldset>
+<fieldset><legend>Which roles interest you? Pick any.</legend><label class="o"><input type="checkbox" name="role" value="Director">Director 🎬</label><label class="o"><input type="checkbox" name="role" value="Writer">Writer ✍️</label><label class="o"><input type="checkbox" name="role" value="Camera">Camera 🎥</label><label class="o"><input type="checkbox" name="role" value="Editor">Editor ✂️</label><label class="o"><input type="checkbox" name="role" value="Sound">Sound 🎧</label><label class="o"><input type="checkbox" name="role" value="Actor">Actor 🎭</label></fieldset>
+<button class="btn" type="submit">Customize my pages</button> <button class="btn alt" type="button" id="onbSkip">Skip and show everything</button>
+<p class="note">This only changes what you see. It is not a security lock, and your answers stay in this browser.</p></form></div>
+<div id="pm" role="dialog" aria-modal="true" aria-labelledby="pmName" hidden><div class="card" id="pmBox"></div></div>
+<footer>First Reel – built at an AI app-building workshop. Made for students who are just getting started.</footer>
+</div>
+
+<script>
+const $=s=>document.querySelector(s);
+const EM={Director:'🎬',Writer:'✍️',Camera:'🎥',Editor:'✂️',Sound:'🎧',Actor:'🎭',Producer:'🎞️',Cinematographer:'🎥',Screenwriter:'✍️'};
+function rl(r){r=String(r||'');const k=Object.keys(EM).find(x=>x.toLowerCase()===r.toLowerCase());return k?r+' '+EM[k]:r}
+const store={get(k,d){try{const v=localStorage.getItem(k);return v?JSON.parse(v):d}catch(e){return d}},set(k,v){try{localStorage.setItem(k,JSON.stringify(v))}catch(e){}}};
+
+/* slate */
+let take=1;
+$('#nameIn').addEventListener('input',e=>{$('#sName').textContent=e.target.value.trim()||'You'});
+$('#clap').addEventListener('click',()=>{const s=$('#slate');s.classList.add('clap');take++;$('#sTake').textContent=take;setTimeout(()=>s.classList.remove('clap'),350)});
+
+/* learning path */
+const stages=[
+ {t:'See like a filmmaker',s:'Learn what you are looking at',l:['Watch one short film and note every shot you remember','Learn the shot sizes: wide, medium, close-up','Learn the three-act story shape']},
+ {t:'Shoot with your phone',s:'Get usable footage',l:['Frame with the rule of thirds','Use window light and avoid harsh overhead light','Shoot a 3-shot scene: wide, medium, close']},
+ {t:'Edit and sound',s:'Turn clips into a scene',l:['Install a free editor and cut a 30-second scene','Cut on action so edits feel smooth','Record clean dialogue and add one music track']},
+ {t:'Share and connect',s:'Get your work seen',l:['Export in 1080p and upload to YouTube or Instagram','Screen it for five friends and write down their notes','Post to the crew board and pitch your next film']}
+];
+const done=new Set(store.get('done',[]));
+const total=stages.reduce((n,s)=>n+s.l.length,0);
+$('#stages').innerHTML=stages.map((st,i)=>`<div class="stage"><h3>${i+1}. ${st.t}</h3><small>${st.s}</small><ul>${st.l.map((x,j)=>`<li><label><input type="checkbox" data-k="${i}-${j}" ${done.has(i+'-'+j)?'checked':''}><span>${x}</span></label></li>`).join('')}</ul></div>`).join('');
+function prog(){const p=Math.round(done.size/total*100);$('#bar').style.width=p+'%';$('#pct').textContent=p===100?'100% complete. You are ready to make your next film.':p+'% complete'}
+$('#stages').addEventListener('change',e=>{const k=e.target.dataset.k;if(!k)return;e.target.checked?done.add(k):done.delete(k);store.set('done',[...done]);prog()});
+prog();
+
+/* challenges */
+const ch=['Film one minute of someone waiting for something.','Tell a story in five shots without any dialogue.','Film a conversation where one person is lying.','Shoot your hostel or campus at a time it is usually empty.','Make a 30-second film about a lost object.','Film the same doorway three times with three different moods.'];
+let ci=0;$('#chBtn').addEventListener('click',()=>{ci=(ci+1)%ch.length;$('#chText').textContent=ch[ci]});
+
+/* crew board */
+const seed=[
+ {name:'Ananya',college:'Hyderabad',kind:'need',role:'Camera',msg:'Writing a 5-minute short about a night bus ride. Need someone with a steady phone or camera for two evenings.',contact:'@ananya.frames'},
+ {name:'Rahul',college:'Warangal',kind:'offer',role:'Editor',msg:'I edit with DaVinci Resolve. Happy to cut your first short for free and share what I learn.',contact:'rahul.edits@example.com'},
+ {name:'Meera',college:'Vizag',kind:'need',role:'Actor',msg:'Directing a two-person dialogue scene. Looking for two actors, no experience needed.',contact:'@meera.directs'},
+ {name:'Kabir',college:'Hyderabad',kind:'offer',role:'Sound',msg:'I can record and clean dialogue and add simple sound design.',contact:'@kabir.sound'}
+];
+let posts=store.get('posts',[]).concat(seed);
+let filter='All';
+const roles=['All','Director','Writer','Camera','Editor','Sound','Actor'];
+const esc=s=>s.replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+function drawFilters(){$('#filters').innerHTML=roles.map(r=>`<button class="chip" type="button" aria-pressed="${r===filter}" data-r="${r}">${rl(r)}</button>`).join('')}
+function drawBoard(){const list=posts.filter(p=>filter==='All'||p.role===filter);
+ $('#board').innerHTML=list.length?list.map(p=>`<article class="post ${p.kind}"><b>${p.kind==='need'?'Looking for a '+esc(rl(p.role)):'Offering '+esc(rl(p.role))+' skills'}</b><h3><a href="#" data-u="crew:${esc(p.name)}">${esc(p.name)}</a>, ${esc(p.college)}</h3><p>${esc(p.msg)}</p><p><b>Contact:</b> ${esc(p.contact)}</p></article>`).join(''):'<p class="note">No posts for this role yet. Be the first to post one below.</p>'}
+$('#filters').addEventListener('click',e=>{const r=e.target.dataset.r;if(!r)return;filter=r;drawFilters();drawBoard()});
+$('#addForm').addEventListener('submit',e=>{e.preventDefault();const f=Object.fromEntries(new FormData(e.target));
+ const mine=store.get('posts',[]);mine.unshift(f);store.set('posts',mine);posts=mine.concat(seed);filter='All';drawFilters();drawBoard();e.target.reset();$('#board').scrollIntoView({behavior:'smooth'})});
+drawFilters();drawBoard();
+/* projects */
+const pSeed=[{title:'Night Bus',logline:'A stranger changes a student\'s last ride home.',status:'Shooting',roles:'Camera, Sound',stars:6},{title:'Chai at Noon',logline:'Two rivals share one table at a crowded cafe.',status:'Writing',roles:'Writer, Actor',stars:3},{title:'The Empty Hostel',logline:'A documentary about campus during vacation.',status:'Editing',roles:'Editor',stars:9}];
+let myProj=store.get('proj',[]),starred=new Set(store.get('starred',[])),joined=new Set(store.get('joined',[]));
+let shared=null,rawProj=[],members=[];const allProj=()=>shared?shared:myProj.concat(pSeed);
+function drawProj(){$('#projBoard').innerHTML=allProj().map(p=>{const k=p.id||p.title;const on=starred.has(k);return `<article class="post"><span class="tag">${esc(p.status)}</span><h3>${esc(p.title)}</h3><p>${esc(p.logline)}</p><p><b>Needs:</b> ${esc((p.roles||'Open to ideas').split(',').map(x=>rl(x.trim())).join(', '))}</p>${p.owner?`<p class="note" style="margin:0">by <a href="#" data-u="${esc(String(p.owner))}">${esc(ownerName(p.owner))}</a></p>`:''}<button class="btn sm ${on?'on':''}" data-star="${esc(k)}">${on?'Starred':'Star'} (${p.stars+(on?1:0)})</button> <button class="btn sm ${joined.has(k)?'on':''}" data-join="${esc(k)}">${joined.has(k)?'Request sent':'Request to join'}</button></article>`}).join('');drawProfile()}
+$('#projBoard').addEventListener('click',e=>{const s=e.target.dataset.star,j=e.target.dataset.join;if(s!==undefined){starred.has(s)?starred.delete(s):starred.add(s);store.set('starred',[...starred])}else if(j!==undefined){joined.has(j)?joined.delete(j):joined.add(j);store.set('joined',[...joined])}else return;drawProj()});
+$('#projForm').addEventListener('submit',e=>{e.preventDefault();const f=Object.fromEntries(new FormData(e.target));f.stars=0;e.target.reset();addProj(f)});
+/* mentors */
+const mentors=[{n:'Sana Iqbal',r:'Cinematographer',d:'8 years shooting ads and shorts. Can review your framing and lighting.'},{n:'Vikram Rao',r:'Editor',d:'Edits documentaries. Can give notes on pacing and sound.'},{n:'Priya Nair',r:'Screenwriter',d:'Writes for web series. Can read your first script pages.'},{n:'Arjun Mehta',r:'Producer',d:'Runs a campus film club. Can help with budgets, permissions and festival plans.'}];
+let conn=new Set(store.get('conn',[]));
+function drawMentors(){$('#mentorBoard').innerHTML=mentors.map(m=>`<article class="post need"><b>${esc(rl(m.r))}</b><h3><a href="#" data-u="mentor:${esc(m.n)}">${esc(m.n)}</a></h3><p>${esc(m.d)}</p><button class="btn sm ${conn.has(m.n)?'on':''}" data-m="${esc(m.n)}">${conn.has(m.n)?'Request sent':'Connect'}</button></article>`).join('')}
+$('#mentorBoard').addEventListener('click',e=>{const m=e.target.dataset.m;if(!m)return;conn.has(m)?conn.delete(m):conn.add(m);store.set('conn',[...conn]);drawMentors();drawProfile()});
+/* opportunities */
+const opps={Festivals:[{t:'Campus Short Film Festival',o:'Student-run, open to first-time directors',d:'Films under 15 minutes. Usually no entry fee.'},{t:'Regional Independent Film Festival',o:'City-level festival',d:'Accepts shorts and documentaries. Check the fee waiver for students.'},{t:'Online Shorts Showcase',o:'Virtual festival',d:'Upload a link. Good for a first submission.'}],Contests:[{t:'One-Minute Film Contest',o:'Phone-shot films only',d:'Theme is announced at the start. Judged on story, not gear.'},{t:'Student Script Challenge',o:'Open to college writers',d:'Submit the first 5 pages of a short script.'},{t:'48-Hour Film Sprint',o:'Team contest',d:'Make a short film in a weekend from a given prop and line.'}],'Casting calls':[{t:'Actors for a college drama short',o:'Posted by a student director',d:'Two roles, 18 to 25, no experience needed. Shoot on weekends.'},{t:'Voice actor for an animated short',o:'Posted by a student animator',d:'Send a 30-second voice sample.'},{t:'Extras for a campus music video',o:'Posted by a film club',d:'One shoot day. Lunch provided.'}]};
+let oTab='Festivals';
+function drawOpps(){$('#oppTabs').innerHTML=Object.keys(opps).map(k=>`<button class="chip" type="button" aria-pressed="${k===oTab}" data-o="${k}">${k}</button>`).join('');$('#oppBoard').innerHTML=opps[oTab].map(x=>`<article class="post"><span class="tag">${oTab.replace(/s$/,'')}</span><h3>${x.t}</h3><p><b>${x.o}</b></p><p>${x.d}</p></article>`).join('')}
+$('#oppTabs').addEventListener('click',e=>{const o=e.target.dataset.o;if(!o)return;oTab=o;drawOpps()});
+/* profile */
+function drawProfile(){const p=store.get('prof',{});const f=$('#profForm');if(!drawProfile.init){for(const k of ['name','college','head','skills','contact'])f.elements[k].value=p[k]||'';drawProfile.init=1}
+$('#pName').textContent=p.name||'Your name';$('#pAv').textContent=(p.name||'?').trim().charAt(0).toUpperCase();$('#pHead').textContent=[p.head,p.college].filter(Boolean).join(' at ')||'Add a headline';
+$('#pSkills').innerHTML=(p.skills||'').split(',').map(s=>s.trim()).filter(Boolean).map(s=>`<span class="skill">${esc(rl(s))}</span>`).join('');
+$('#stL').textContent=done.size;$('#stP').textContent=shared?shared.filter(p=>p.mine).length:myProj.length;$('#stC').textContent=conn.size;$('#stS').textContent=starred.size;
+const n=done.size+myProj.length*3+conn.size*2+starred.size+joined.size;let h='';for(let i=0;i<182;i++){const age=181-i;const on=age<n*4&&((i*7+3)%5<3);h+=`<i class="${on?'l'+(1+(i*13)%3):''}"></i>`}$('#heat').innerHTML=h}
+$('#profForm').addEventListener('submit',e=>{e.preventDefault();store.set('prof',Object.fromEntries(new FormData(e.target)));drawProfile()});
+$('#stages').addEventListener('change',drawProfile);
+/* shared network */
+let db=null,uid=null,syncT=null;
+const _set=store.set;store.set=(k,v)=>{_set(k,v);if(['done','starred','joined','conn','prof','liked','onb'].includes(k))sync()};
+function sync(){if(!db||!uid)return;clearTimeout(syncT);syncT=setTimeout(()=>{const p=store.get('prof',{});db.doc('profiles/'+uid).set({name:p.name||(store.get('onb',{})||{}).name||'',college:p.college||'',head:p.head||'',skills:p.skills||'',contact:p.contact||'',done:done.size,doneIds:[...done],starred:[...starred],joined:[...joined],conn:[...conn],liked:[...liked],onb:store.get('onb',{}),ts:Date.now()}).catch(()=>{})},600)}
+async function addProj(f){const local=()=>{myProj.unshift(f);store.set('proj',myProj);drawProj()};if(!db||!uid)return local();try{await db.collection('projects').add({title:f.title,logline:f.logline,status:f.status,roles:f.roles||'',owner:uid,ts:Date.now()})}catch(e){local()}}
+function drawMembers(){const el=$('#memBoard');const list=members.filter(m=>m.name);el.innerHTML=list.length?list.map(m=>`<article class="post" data-u="${esc(String(m.id))}" tabindex="0" role="button"><h3>${esc(String(m.name))}</h3><p>${esc([m.head,m.college].filter(Boolean).map(String).join(' at '))}</p><div>${String(m.skills||'').split(',').map(s=>s.trim()).filter(Boolean).map(s=>`<span class="skill">${esc(rl(s))}</span>`).join('')}</div><p>${Number(m.done)||0} lessons done, ${Array.isArray(m.conn)?m.conn.length:0} connections</p></article>`).join(''):'<p class="note">No members yet. Save your profile to be the first.</p>'}
+function rebuild(){shared=rawProj.map(p=>({...p,mine:p.owner===uid,stars:members.filter(m=>m.id!==uid&&Array.isArray(m.starred)&&m.starred.includes(p.id)).length})).sort((a,b)=>(b.ts||0)-(a.ts||0)).concat(pSeed.map(s=>({...s})));drawProj()}
+(async()=>{try{if(!window.claude)return;const [d,u]=await Promise.all([claude.use('db'),claude.use('user')]);if(!d||!u)return;uid=await u.id();db=d;
+db.collection('profiles').onSnapshot(s=>{members=s.docs.map(x=>({...x.data(),id:x.id}));rebuild();drawMembers();drawStories();drawFeed()},()=>{});
+db.collection('projects').onSnapshot(s=>{rawProj=s.docs.map(x=>({...x.data(),id:x.id}));rebuild()},()=>{});
+db.collection('posts').onSnapshot(s=>{rawPosts=s.docs.map(x=>({...x.data(),id:x.id}));drawFeed()},()=>{});
+await restore();sync();$('#netNote').textContent='Connected. Profiles and projects are shared with everyone who can open this page.'}catch(e){}})();
+/* feed */
+const fSeed=[{id:'s1',title:'Golden hour test',caption:'First attempt at shooting only in window light.',owner:'',ts:1},{id:'s2',title:'Two-shot dialogue',caption:'Practising cut-on-action for the first time.',owner:'',ts:0}];
+var rawPosts=[],localPosts=store.get('posts2',[]),liked=new Set(store.get('liked',[]));
+function drawStories(){const l=members.filter(m=>m.name);$('#stories').innerHTML=l.length?l.map(m=>`<a class="story" href="#" data-u="${esc(String(m.id))}"><div class="ring"><b>${esc(String(m.name).charAt(0).toUpperCase())}</b></div>${esc(String(m.name).split(' ')[0])}</a>`).join(''):'<span class="note">Members appear here once they save a profile.</span>'}
+function drawFeed(){const nm={};members.forEach(m=>nm[m.id]=m.name);const all=(db?rawPosts:localPosts).slice().sort((a,b)=>(b.ts||0)-(a.ts||0)).concat(fSeed);
+$('#feedGrid').innerHTML=all.map(p=>{const id=String(p.id),t=String(p.title||''),on=liked.has(id);const n=members.filter(m=>m.id!==uid&&Array.isArray(m.liked)&&m.liked.includes(id)).length+(on?1:0);
+const img=typeof p.img==='string'&&p.img.startsWith('data:image/')?`<img src="${p.img}" alt="${esc(t)}">`:`<div class="ph">${esc(t)}</div>`;
+const by=p.owner?((p.owner===uid||p.owner==='me')?'You':(nm[p.owner]?String(nm[p.owner]):'A member')):'Sample post';
+const link=typeof p.link==='string'&&/^https:\/\//.test(p.link)?` <a href="${esc(p.link)}" target="_blank" rel="noopener noreferrer">${plat(p.link)?'Watch on '+plat(p.link):'Watch film'}</a>`:'';
+return `<article class="fc"${p.owner?` data-u="${esc(String(p.owner))}" tabindex="0"`:''}>${vidTag(p,t)||(plat(p.link)?`<a class="thumb" href="${esc(p.link)}" target="_blank" rel="noopener noreferrer" aria-label="Watch ${esc(t)} on ${plat(p.link)}">${img}<span class="play" aria-hidden="true">▶</span><span class="badge">${plat(p.link)}</span></a>`:img)}<div class="b"><b>${esc(t)}</b><p>${esc(String(p.caption||''))}</p><p class="note" style="margin:0">${p.owner?`<a href="#" data-u="${esc(String(p.owner))}">${esc(by)}</a>`:esc(by)}${link}</p><button class="btn sm ${on?'on':''}" data-like="${esc(id)}">${on?'Liked':'Like'} (${n})</button></div></article>`}).join('')}
+$('#feedGrid').addEventListener('click',e=>{const k=e.target.dataset.like;if(!k)return;liked.has(k)?liked.delete(k):liked.add(k);store.set('liked',[...liked]);drawFeed()});
+function plat(u){try{const x=new URL(u);if(x.protocol!=='https:')return '';const h=x.hostname.replace(/^www\.|^m\./,'');if(h==='youtube.com'||h==='youtu.be')return 'YouTube';if(h==='vimeo.com')return 'Vimeo';if(h==='instagram.com')return 'Instagram'}catch(e){}return ''}
+function shrink(file){return new Promise((res,rej)=>{const r=new FileReader();r.onerror=rej;r.onload=()=>{const im=new Image();im.onerror=rej;im.onload=()=>{let s=640,q=.7,out='';for(let i=0;i<3;i++){const sc=Math.min(1,s/Math.max(im.width,im.height));const c=document.createElement('canvas');c.width=Math.round(im.width*sc);c.height=Math.round(im.height*sc);c.getContext('2d').drawImage(im,0,0,c.width,c.height);out=c.toDataURL('image/jpeg',q);if(out.length<180000)break;s*=.7;q-=.1}res(out)};im.src=r.result};r.readAsDataURL(file)})}
+$('#feedForm').addEventListener('submit',async e=>{e.preventDefault();const fd=new FormData(e.target);const file=fd.get('img');const err=$('#feedErr');err.textContent='';const vf=fd.get('video'),hasV=vf&&vf.size>0,lk=String(fd.get('link')||'');if(!hasV&&!plat(lk)){err.textContent='Upload a video or add an https link from YouTube, Vimeo or Instagram.';return}if(lk&&!plat(lk)){err.textContent='Links must be https links from YouTube, Vimeo or Instagram.';return}if(!hasV&&(!file||!file.size)){err.textContent='Add a still image for your film.';return}
+let vurl='',vid='';if(hasV){if(vf.size>20*1024*1024){err.textContent='That video is over 20 MB. Export it at 720p or trim it.';return}const A=window.claude?await claude.use('assets').catch(()=>null):null;if(!A){err.textContent='Video uploads are not available for your account. Add a link instead.';return}err.textContent='Uploading video...';try{const r=await A.upload(vf);vurl=r.url;vid=r.id;err.textContent=''}catch(x){err.textContent='Upload failed ('+((x&&x.code)||'error')+'). Try a smaller file or add a link instead.';return}}
+let img='';try{if(file&&file.size)img=await shrink(file)}catch(x){}
+const p={title:String(fd.get('title')),caption:String(fd.get('caption')),link:lk,img,video:vurl,vid,ts:Date.now()};e.target.reset();
+if(db&&uid){try{await db.collection('posts').add({...p,owner:uid});return}catch(x){}}
+p.id='l'+p.ts;p.owner='me';localPosts.unshift(p);store.set('posts2',localPosts);drawFeed()});
+drawStories();drawFeed();
+drawMembers();
+drawProj();drawMentors();drawOpps();
+/* onboarding */
+const SEC=['learn','make','crew','feed','projects','mentors','opps','members','profile'];
+const GOALS={'Learn the basics':['learn','make','mentors'],'Find a crew':['crew','projects','members'],'Get a mentor':['mentors','learn'],'Show my work':['feed','projects'],'Find festivals and casting calls':['opps','feed']};
+function allowed(o){if(!o||!o.goals||!o.goals.length)return new Set(SEC);const s=new Set(['profile']);o.goals.forEach(g=>(GOALS[g]||[]).forEach(x=>s.add(x)));if(o.exp==='Complete beginner'){s.add('learn');s.add('make')}return s}
+function applyView(){const o=store.get('onb',null),all=store.get('showAll',false),ok=all?new Set(SEC):allowed(o);
+SEC.forEach(id=>{const el=document.getElementById(id);if(el)el.hidden=!ok.has(id)});
+document.querySelectorAll('a[href^="#"]').forEach(a=>{const id=a.getAttribute('href').slice(1);if(SEC.includes(id))a.hidden=!ok.has(id)});
+const bar=$('#viewBar');if(!o){bar.hidden=true;return}bar.hidden=false;const some=o.goals&&o.goals.length;
+$('#viewTxt').textContent=(o.name?'Welcome, '+o.name+'. ':'')+(!some||all?'Showing all pages.':'Showing the pages that match your goals: '+o.goals.join(', ')+'.');
+$('#showAll').hidden=!some;$('#showAll').textContent=all?'Show my pages only':'Show all pages'}
+function openOnb(){const o=store.get('onb',{}),f=$('#onbForm');f.elements.name.value=o.name||'';f.querySelectorAll('input[type=radio],input[type=checkbox]').forEach(i=>{i.checked=i.type==='radio'?o.exp===i.value:((i.name==='goal'?o.goals:o.roles)||[]).includes(i.value)});$('#onb').hidden=false;f.elements.name.focus()}
+$('#onbForm').addEventListener('submit',e=>{e.preventDefault();const fd=new FormData(e.target);const o={name:String(fd.get('name')||'').trim(),exp:String(fd.get('exp')||''),goals:fd.getAll('goal').map(String),roles:fd.getAll('role').map(String)};store.set('onb',o);store.set('showAll',false);
+const p=store.get('prof',{});if(!p.name&&o.name)p.name=o.name;if(!p.skills&&o.roles.length)p.skills=o.roles.join(', ');store.set('prof',p);const pf=$('#profForm');pf.elements.name.value=p.name||'';pf.elements.skills.value=p.skills||'';drawProfile();
+if(o.roles[0]&&roles.includes(o.roles[0])){filter=o.roles[0];drawFilters();drawBoard()}
+if(o.roles.includes('Actor')){oTab='Casting calls';drawOpps()}
+$('#onb').hidden=true;applyView();window.scrollTo({top:0})});
+$('#onbSkip').addEventListener('click',()=>{store.set('onb',{name:'',exp:'',goals:[],roles:[]});store.set('showAll',false);$('#onb').hidden=true;applyView()});
+$('#retake').addEventListener('click',e=>{e.preventDefault();openOnb()});
+$('#showAll').addEventListener('click',()=>{store.set('showAll',!store.get('showAll',false));applyView()});
+applyView();if(!store.get('onb',null))openOnb();
+/* profile viewer */
+function vidTag(p,t){if(typeof p.video!=='string'||!p.video.startsWith('/_blob/'))return '';const po=typeof p.img==='string'&&p.img.startsWith('data:image/')?` poster="${p.img}"`:'';return `<video controls playsinline preload="metadata"${po} src="${esc(p.video)}#t=0.5" aria-label="${esc(t)}"></video>`}
+function contactHtml(c){c=String(c||'').trim();if(!c)return '<p class="note">No contact details shared yet.</p>';if(/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(c))return `<p><b>Contact:</b> ${esc(c)}</p><a class="btn sm" href="mailto:${esc(c)}">Email them</a>`;const h=c.replace(/^@/,'');if(/^[A-Za-z0-9._]{1,30}$/.test(h))return `<p><b>Contact:</b> @${esc(h)} on Instagram</p><a class="btn sm" href="https://instagram.com/${esc(h)}" target="_blank" rel="noopener noreferrer">Open Instagram</a>`;return `<p><b>Contact:</b> ${esc(c)}</p>`}
+function openSample(id){const i=id.indexOf(':'),kind=id.slice(0,i),nm=id.slice(i+1);let h='';
+if(kind==='crew'){const p=posts.find(x=>x.name===nm);if(!p)return;h=`<div class="avatar">${esc(nm.charAt(0).toUpperCase())}</div><h3 id="pmName" style="font-size:30px">${esc(nm)}</h3><div style="color:var(--muted)">${esc(String(p.college))}</div><div><span class="skill">${esc(rl(p.role))}</span></div><p>${esc(String(p.msg))}</p><p><b>Contact:</b> ${esc(String(p.contact))}</p><p class="note">${p.kind==='need'?'Looking for help on a project.':'Offering their skills.'}</p>`}
+else{const m=mentors.find(x=>x.n===nm);if(!m)return;h=`<div class="avatar">${esc(nm.charAt(0).toUpperCase())}</div><h3 id="pmName" style="font-size:30px">${esc(nm)}</h3><div><span class="skill">${esc(rl(m.r))}</span></div><p>${esc(m.d)}</p><p class="note">Sample mentor profile.</p>`}
+$('#pmBox').innerHTML=h+'<button class="btn" type="button" id="pmClose">Close</button>';$('#pm').hidden=false;$('#pmClose').focus();$('#pmClose').addEventListener('click',()=>{$('#pm').hidden=true})}
+function ownerName(id){if(id===uid||id==='me')return 'You';const m=members.find(x=>x.id===id);return m&&m.name?String(m.name):'A member'}
+function openProfile(id){if(/^(crew|mentor):/.test(id))return openSample(id);const mine=id==='me'||(uid&&id===uid);let m;if(mine){const p=store.get('prof',{});m={name:p.name,college:p.college,head:p.head,skills:p.skills,contact:p.contact,done:done.size,conn:[...conn]}}else m=members.find(x=>x.id===id);
+const has=m&&m.name;const name=has?String(m.name):(mine?'You':'This member');
+const isMine=p=>p.owner===id||(mine&&(p.owner===uid||p.owner==='me'));const posts=(db?rawPosts:localPosts).filter(isMine);const projs=rawProj.filter(isMine).concat(mine&&!db?myProj:[]);
+const sk=String(m&&m.skills||'').split(',').map(s=>s.trim()).filter(Boolean).map(s=>`<span class="skill">${esc(rl(s))}</span>`).join('');
+const th=posts.map(p=>typeof p.img==='string'&&p.img.startsWith('data:image/')?`<img src="${p.img}" alt="${esc(String(p.title||''))}" style="width:100px;height:100px;object-fit:cover;border-radius:8px">`:`<div class="ph" style="width:100px;height:100px;font-size:13px;border-radius:8px">${esc(String(p.title||''))}</div>`).join('');
+const isV=p=>typeof p.video==='string'&&p.video.startsWith('/_blob/');const ct=contactHtml(m&&m.contact);const ls=posts.filter(p=>plat(p.link)||isV(p)).map(p=>isV(p)?`<li>${esc(String(p.title||''))}<br><video controls playsinline preload="metadata" src="${esc(p.video)}#t=0.5" style="width:100%;border-radius:8px;margin-top:4px"></video></li>`:`<li>${esc(String(p.title||''))}: <a href="${esc(p.link)}" target="_blank" rel="noopener noreferrer">Watch on ${plat(p.link)}</a></li>`).join('');
+const pj=projs.map(p=>`<li>${esc(String(p.title||''))} <span class="tag">${esc(String(p.status||''))}</span><br><span class="note">${esc(String(p.logline||''))}</span></li>`).join('');
+$('#pmBox').innerHTML=`<div class="avatar">${esc(name.charAt(0).toUpperCase())}</div><h3 id="pmName" style="font-size:30px">${esc(name)}</h3><div style="color:var(--muted)">${esc(has?[m.head,m.college].filter(Boolean).map(String).join(' at ')||'Filmmaker':'This member has not saved a profile yet.')}</div><div>${sk}</div>${ct}<div class="stats"><div><b>${Number(m&&m.done)||0}</b><span>lessons done</span></div><div><b>${Array.isArray(m&&m.conn)?m.conn.length:0}</b><span>connections</span></div><div><b>${projs.length}</b><span>projects</span></div><div><b>${posts.length}</b><span>posts</span></div></div>${th?`<b>Posts</b><div class="thumbs">${th}</div>`:''}${ls?`<b>Films</b><ul>${ls}</ul>`:''}${pj?`<b>Projects</b><ul>${pj}</ul>`:''}<button class="btn" type="button" id="pmClose">Close</button>`;
+$('#pm').hidden=false;$('#pmClose').focus();$('#pmClose').addEventListener('click',()=>{$('#pm').hidden=true})}
+document.addEventListener('click',e=>{if(e.target.id==='pm'){$('#pm').hidden=true;return}const a=e.target.closest('[data-u]');if(!a||e.target.closest('button')||e.target.closest('video')||e.target.closest('a[target]'))return;e.preventDefault();openProfile(a.dataset.u)});
+document.addEventListener('keydown',e=>{if(e.key==='Escape')$('#pm').hidden=true;if(e.key==='Enter'&&e.target.dataset&&e.target.dataset.u){e.preventDefault();openProfile(e.target.dataset.u)}});
+/* restore saved state on a new device */
+async function restore(){try{const s=await db.doc('profiles/'+uid).get();const d=s.exists?s.data():null;if(!d)return;
+const arr=x=>Array.isArray(x)?x.map(String):[];
+arr(d.doneIds).forEach(x=>done.add(x));_set('done',[...done]);document.querySelectorAll('#stages input[data-k]').forEach(i=>{i.checked=done.has(i.dataset.k)});prog();
+arr(d.starred).forEach(x=>starred.add(x));_set('starred',[...starred]);arr(d.joined).forEach(x=>joined.add(x));_set('joined',[...joined]);arr(d.conn).forEach(x=>conn.add(x));_set('conn',[...conn]);arr(d.liked).forEach(x=>liked.add(x));_set('liked',[...liked]);
+const p=store.get('prof',{});if(!p.name&&d.name){_set('prof',{name:String(d.name),college:String(d.college||''),head:String(d.head||''),skills:String(d.skills||''),contact:String(d.contact||'')});const pf=$('#profForm');for(const k of ['name','college','head','skills','contact'])pf.elements[k].value=String(d[k]||'')}
+if(!store.get('onb',null)&&d.onb&&Array.isArray(d.onb.goals)){_set('onb',{name:String(d.onb.name||''),exp:String(d.onb.exp||''),goals:arr(d.onb.goals),roles:arr(d.onb.roles)});$('#onb').hidden=true}
+applyView();drawProfile();drawProj();drawMentors();drawFeed()}catch(e){}}
+</script>
+</body>
+</html>
